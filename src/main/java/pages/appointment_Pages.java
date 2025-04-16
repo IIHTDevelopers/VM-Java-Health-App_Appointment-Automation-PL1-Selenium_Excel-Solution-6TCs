@@ -8,101 +8,26 @@ import org.openqa.selenium.WebElement;
 
 public class appointment_Pages extends StartupPage {
 
-	//Locators of L1 Scenarios
-	//login locators
-	By usernameTextfield = By.id("username_id");
+//	TC-1 Locators
 	By usernameTextbox = By.xpath("//input[@id='username_id']");
 	By passwordTextbox = By.xpath("//input[@id='password']");
 	By signInButton = By.xpath("//button[@id='login']");
-	By registeredPatientTextElement = By.xpath("//p[contains(text(), 'Registered Patient')]");
-
-	//Appoint Module's locators 
 	By appointmentModuleByElement = By.xpath("//a[@href='#/Appointment']");
+//	TC-2 Locators
 	By appointmentModuleToggleByElement = By.xpath("//span[@data-target='#Appointment']");
 	By selectCounterTitleNameByElement = By.xpath("//span[contains(text(), 'Select Counter')]");
-
+//	TC-3 Locators
 	By selectCounterNewOneLinkByElement = By.xpath("//div[@class='counter-item']//h5[contains(text(), 'New-1')]");
 	By newPatientButtonLinkByElement = By.xpath("//button[@id='btnNewPatient']");
 	By patientInformationTextByElement = By.xpath("//h4[contains(text(), 'Patient Information')]");
+//	TC-4 Locators
 	By careOfPersonContactTextboxByElement = By.xpath("//input[@id='id_CareTaker_CareTakerContact']");
+//	TC-5 Locators
 	By careOfPersonTextboxByElement = By.xpath("//input[@id='id_CareTaker_CareTakerName']");
+//	TC-6 Locators
 	By printInvoiceButtonByElement = By.xpath("//input[@id='btnPrintInvoice']");
 	By confirmButtonByElement = By.xpath("//button[@id='id_btn_confirm_confirmation']");
 	By errorMessageOfLastNameTextboxByElement = By.xpath("//span[contains(text(), ' Last Name is required.')]");
-
-	By firstNameTextboxByElement = By.xpath("//input[@id='aptPatFirstName']");
-	By middleNameTextboxByElement = By.xpath("//input[@formcontrolname='MiddleName']");
-	By lastNameTextboxByElement = By.xpath("//input[@formcontrolname='LastName']");
-	By ageTextboxByElement = By.xpath("//input[@id='txtAgeInput']");
-	By phoneTextboxByElement = By.xpath("//input[@id='txtPhone']");
-
-	By havDOBCheckboxByElement = By.xpath("//input[@name='IsDobAvailable']/..//span");
-	By dobDatePickerByElement = By.xpath("//input[@id='date']");
-
-	By externalCheckBoxByElement = By.xpath("//input[@id='id_checkbox_includeExternalReferral']/..//span");
-	By plusIconClickToAddExternalReffererByElement = By.xpath("//a[@title='Click to add new external refferer']");
-	By addExternalReferralTitleByElement = By.xpath("//span[contains(text(), 'Add External Referral')]");
-	By referrerNameTexboxByElement = By.xpath("//input[@id='referrerName']");
-	By extRefferAddressTextFieldElement = By.xpath("//input[@id='ExtRefferaddress']");
-	By contactNumberTextFieldElement = By.xpath("//input[@id='contactNum']");
-	By emailTextFieldElement = By.xpath("//div[@class='col-md-7']//input[@id='email']");
-	By isIncentiveApplicableCheckboxElement = By.xpath("(//div[@class='icheck-inline']//span)[2]");
-	By addreferrerButtonByElement = By.xpath("//button[@id='add']");
-	By successNotificationPopupMessageElement = By.xpath("//div[@class='msg-text padding-8-all']");
-	By successNotificationPopupMessageOneElement = By.xpath("//p[@class='msg-status']");
-	By successNotificationPopupMessageTwoElement = By.xpath("//p[@class='main-message']");
-
-	By relationWithPatientDropdownByElement = By.xpath("//select[@id='id_CareTaker_RelationWithPatient']");
-
-	By bookAppointmentSubModuleByElement = By.xpath("//a[@href='#/Appointment/CreateAppointment']//span[contains(text(), 'Book Appointment')]");
-	By newPatientButtonByElement = By.xpath("//a[contains(text(), 'New Patient')]");
-
-	By monthRadioButtonByElement = By.xpath("//input[@value='M']/..//span");
-	By daysRadioButtonByElement = By.xpath("//input[@value='D']/..//span");
-
-	By firstNameTexboxOfBookAppointmentByElement = By.xpath("//input[@formcontrolname='FirstName']");
-	By middleNameTexboxOfBookAppointmentByElement = By.xpath("//input[@formcontrolname='MiddleName']");
-	By lastNameTexboxOfBookAppointmentByElement = By.xpath("//input[@formcontrolname='LastName']");
-	By genderMaleOptionOfBookAppointmentByElement = By.xpath("//input[@value='Male']/..//span");
-	By addAppointmentButtonByElement = By.xpath("//input[@name='addappointment']");
-
-	By errorNotificationPopupMessageElement = By.xpath("//div[@class='msg-text padding-8-all']");
-	By statusErrorNotificationMessageByElement = By.xpath("//p[contains(text(), 'failed')]");
-	By mainErrorNotificationMessageByElement = By.xpath("//p[contains(text(), 'Failed!! Cannot create appointment. Check the Details Correctly.')]");
-
-	By procurementModule = By.xpath("//span[.='Procurement']");
-	By settingsTab = By.xpath("//a[.=' Settings ']");
-	By subCategoryTabByElement = By.xpath("//a[contains(text(), 'Sub Category')]");
-	By cuttonSubCategoryNameByElement = By.xpath("//div[contains(text(), 'cotton')]");
-
-	By vaccinationModuleByElement = By.xpath("//a[@href='#/Vaccination']");
-	By vaccinationModulesToggleIconByElement = By.xpath("//span[@data-target='#Vaccination']");
-	By patientListSubModuleByElement = By.xpath("//a[@href='#/Vaccination/PatientList']//span[contains(text(), 'Patient List')]");
-	By titleNameOfVaccinationPatientRegisterFormByElement = By.xpath("//span[contains(text(), 'Vaccination Patient Register')]");
-	By newVaccinationPatientButtonByElement = By.xpath("//button[contains(text(), 'New Vaccination Patient')]");
-
-	By keyboardButtonElement = By.xpath("//div[@title='Shortcut Keys']");
-	By altPlusNtooltipMessageElement = By.xpath("//li[contains(text(),'+')]");
-
-	By membershipDropdownByElement = By.xpath("//select[@id='Scheme']");
-
-	By reportsSubButton = By.xpath("//a[.=' Reports ']");
-	By currentStockLevelButton = By.xpath("//i[.='Current Stock Level']");
-	By selectedItemDropdown = By.xpath("//div[@class='selected-list']");
-	By selectItemSearchBar = By.xpath("//input[@placeholder='Search']");
-	By accountsItemCheckBox = By.xpath("//label[.='Accounts']");
-	By generalInventoryOption = By.xpath("//span[@class='fa fa-remove']");
-	By accountOption = By.xpath("//span[.='Accounts']");
-
-	By invoiceHeadersSubTab = By.xpath("//a[.='Invoice Headers']");
-	By addNewInvoiceHeaderButton = By.xpath("//input[@value='Add New Invoice Header']");
-	By chooseFileButton = By.id("img");
-
-	By closeAddNewPatientForm = By.xpath("//button[.='X']");
-	By xButton = By.xpath("//a[.='X']");
-
-
-	//Locators of L2 Scenarios
 
 
 	String pageName = this.getClass().getSimpleName();
