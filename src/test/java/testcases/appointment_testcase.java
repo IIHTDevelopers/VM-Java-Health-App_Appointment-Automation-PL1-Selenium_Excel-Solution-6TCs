@@ -58,7 +58,6 @@ public class appointment_testcase extends AppTestBase
 		Assert.assertEquals(appointment_PagesInstance.verifyTitleOfThePage(),expectedData.get("dasboardTitle")) ;
 		Assert.assertEquals(appointment_PagesInstance.verifyURLOfThePage(),expectedData.get("homePageUrl")) ;
 		Assert.assertTrue(locatorsFactoryInstance.verifyAppointmentModuleIsPresent(driver).isDisplayed(), "Appointment Module is not present in the current page, Please check manually");
-//		Assert.assertTrue(locatorsFactoryInstance.totalDoctorTextIsPresent(driver).isDisplayed(), "total doctors text is not present in the current page, Please check manually");
 	}
 
 	@Test(priority = 2, groups = {"sanity"}, description="* Verify that Appointment module is present or not ?\r\n"
